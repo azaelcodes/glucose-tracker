@@ -1,6 +1,19 @@
 <h2>Glucose Levels</h2>
-<ul class="glucose-items">
-  <li *ngFor="let item of items">
-    <span class="badge">{{item.id}}</span> {{item.level}}
-  </li>
-</ul>
+
+<mat-table [dataSource]="dataSource">
+
+  <mat-header-row *matHeaderRowDef="columnsToDisplay"></mat-header-row>
+  <mat-row *matRowDef="let row; columns: columnsToDisplay"></mat-row>
+
+  <ng-container matColumnDef="id">
+    <mat-header-cell *matHeaderCellDef>ID</mat-header-cell>
+    <mat-cell *matCellDef="let item">{{item.id}}</mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="level">
+    <mat-header-cell *matHeaderCellDef>Level</mat-header-cell>
+    <mat-cell *matCellDef="let item">{{item.level}}</mat-cell>
+  </ng-container>
+
+</mat-table>
+

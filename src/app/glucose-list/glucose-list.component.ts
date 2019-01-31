@@ -10,7 +10,8 @@ import { ITEMS } from '../mock-items';
 export class GlucoseListComponent implements OnInit {
 
   title = 'Glucose List';
-  items = ITEMS;
+  dataSource = ITEMS;
+  columnsToDisplay = ['id', 'level'];
 
   constructor() { }
 
