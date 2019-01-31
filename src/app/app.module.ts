@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { GlucoseListComponent } from './glucose-list/glucose-list.component';
-import {  MatTableModule } from '@angular/material';
+import {  MatTableModule, MatToolbarModule } from '@angular/material';
 
 
 @NgModule({
@@ -14,7 +14,8 @@ import {  MatTableModule } from '@angular/material';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    MatTableModule
+    MatTableModule,
+    MatToolbarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
