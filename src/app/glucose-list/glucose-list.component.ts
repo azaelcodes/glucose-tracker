@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Glucose } from '../glucose';
 import { ITEMS } from '../mock-items';
 
 @Component({
