@@ -2,8 +2,6 @@
   <h1>Glucose Levels</h1>
 </mat-toolbar>
 
-<app-glucose-item [glucose]="selectedItem"></app-glucose-item>
-
 <mat-accordion>
 
   <mat-expansion-panel *ngFor="let item of items">
@@ -18,8 +16,7 @@
 
     </mat-expansion-panel-header>
 
-    <p>{{ item.published }}</p>
-    <p>{{ item.level }}</p>
+    <app-glucose-item [glucose]="item"></app-glucose-item>
 
   </mat-expansion-panel>
 
