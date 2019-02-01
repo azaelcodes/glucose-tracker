@@ -1,0 +1,9 @@
+<div *ngIf="glucose">
+
+  <h2>{{ glucose.level }}</h2>
+  <label>
+    Level:
+  </label>
+  <input [(ngModel)]="glucose.level" />
+
+</div>

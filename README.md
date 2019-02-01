@@ -9,9 +9,7 @@ This project is loosely based on Angular's [Tour of Heroes tutorial](https://ang
 ### Level
 _**Intermediate**_
 
-
-# Step by step tutorial
-#### Step 1 - Initial Project
+#Step 1 - Initial Project
 1. In the command line navigate to a folder where you want to create the App <br>
 ``` $ cd code ```
 
@@ -29,7 +27,7 @@ _**Intermediate**_
 We are ready to move to the next step.
 
 # Step 2 - Create the main component
-We need to create our first and main component to display glucose information, this must be placed inside the application shell.
+We need to create our first and main component to display a list of glucose levels, this must be placed inside the application shell.
 
 Using the CLI, generate a new component named `glucose-list`
 

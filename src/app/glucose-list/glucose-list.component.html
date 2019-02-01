@@ -2,20 +2,27 @@
   <h1>Glucose Levels</h1>
 </mat-toolbar>
 
-<mat-list>
+<app-glucose-item [glucose]="selectedItem"></app-glucose-item>
 
-  <mat-list-item
-    [class.mat-elevation-z1]="true"
-    *ngFor="let item of items" (click)="show($event)">
-    <h3 matLine>
-      {{ item.level }}
-    </h3>
-    <p mat-line>
-     {{ item.added | date }}
-    </p>
+<mat-accordion>
 
-  </mat-list-item>
+  <mat-expansion-panel *ngFor="let item of items">
 
-</mat-list>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        {{ item.level }}
+      </mat-panel-title>
+      <mat-panel-description>
+        {{ item.added | date }}
+      </mat-panel-description>
 
+    </mat-expansion-panel-header>
+
+    <p>{{ item.published }}</p>
+    <p>{{ item.level }}</p>
+
+  </mat-expansion-panel>
+
+
+</mat-accordion>
 

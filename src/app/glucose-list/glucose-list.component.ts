@@ -11,14 +11,15 @@ export class GlucoseListComponent implements OnInit {
 
   title = 'Glucose Levels';
   items = ITEMS;
+  selectedItem: Glucose;
 
   constructor() { }
 
   ngOnInit() {
   }
 
-  show(event: any) {
-    console.log(event.target);
+  onSelectItem(item: Glucose) {
+    this.selectedItem = item;
   }
 
 }
