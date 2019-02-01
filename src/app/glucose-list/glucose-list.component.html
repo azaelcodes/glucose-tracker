@@ -1,21 +1,21 @@
 <mat-toolbar>
-  <span>Glucose Levels</span>
+  <h1>Glucose Levels</h1>
 </mat-toolbar>
 
-<mat-table [dataSource]="dataSource">
+<mat-list>
 
-  <mat-header-row *matHeaderRowDef="columnsToDisplay"></mat-header-row>
-  <mat-row *matRowDef="let row; columns: columnsToDisplay"></mat-row>
+  <mat-list-item
+    [class.mat-elevation-z1]="true"
+    *ngFor="let item of items" (click)="show($event)">
+    <h3 matLine>
+      {{ item.level }}
+    </h3>
+    <p mat-line>
+     {{ item.added | date }}
+    </p>
 
-  <ng-container matColumnDef="id">
-    <mat-header-cell *matHeaderCellDef>ID</mat-header-cell>
-    <mat-cell *matCellDef="let item">{{item.id}}</mat-cell>
-  </ng-container>
+  </mat-list-item>
 
-  <ng-container matColumnDef="level">
-    <mat-header-cell *matHeaderCellDef>Level</mat-header-cell>
-    <mat-cell *matCellDef="let item">{{item.level}}</mat-cell>
-  </ng-container>
+</mat-list>
 
-</mat-table>
 

@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Glucose } from '../glucose';
 import { ITEMS } from '../mock-items';
 
 @Component({
@@ -9,13 +8,16 @@ import { ITEMS } from '../mock-items';
 })
 export class GlucoseListComponent implements OnInit {
 
-  title = 'Glucose List';
-  dataSource = ITEMS;
-  columnsToDisplay = ['id', 'level'];
+  title = 'Glucose Levels';
+  items = ITEMS;
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  show(event: any) {
+    console.log(event.target);
   }
 
 }
