@@ -8,10 +8,11 @@
 
     <mat-expansion-panel-header>
       <mat-panel-title>
-        {{ item.level }}
+        {{ item.added | date }}
+        {{ item.categoryId }}
       </mat-panel-title>
       <mat-panel-description>
-        {{ item.added | date }}
+        {{ item.level }}
       </mat-panel-description>
 
     </mat-expansion-panel-header>

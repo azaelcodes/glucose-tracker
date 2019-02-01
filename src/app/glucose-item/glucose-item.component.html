@@ -1,9 +1,18 @@
 <div *ngIf="glucose">
 
-  <h2>{{ glucose.level }}</h2>
-  <label>
-    Level:
-  </label>
-  <input [(ngModel)]="glucose.level" />
+  <form class="form">
+    <mat-form-field>
+      <input matInput placeholder="Level" [(ngModel)]="glucose.level" value="{{ glucose.level }}" [ngModelOptions]="{standalone: true}">
+    </mat-form-field>
+
+    <mat-form-field>
+      <select matNativeControl required>
+        <option value="volvo">Volvo</option>
+        <option value="saab">Saab</option>
+        <option value="mercedes">Mercedes</option>
+        <option value="audi">Audi</option>
+      </select>
+    </mat-form-field>
+  </form>
 
 </div>
