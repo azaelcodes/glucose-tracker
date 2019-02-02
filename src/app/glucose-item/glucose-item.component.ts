@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Glucose } from '../glucose';
+import { Category } from  '../category';
 
 @Component({
   selector: 'app-glucose-item',
@@ -10,6 +11,7 @@ import { Glucose } from '../glucose';
 export class GlucoseItemComponent implements OnInit {
   
   @Input() glucose: Glucose;
+  @Input() category: Category;
 
   constructor() { }
 
