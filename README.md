@@ -6,6 +6,13 @@ _*This repository contains the finished project.*_
 ### Note
 This project is loosely based on Angular's [Tour of Heroes tutorial](https://angular.io/tutorial)
 
+## Clone this repo.
+`git clone https://github.com/azaelcodes/glucose-tracker.git`
+
+`cd glucose-tracker/ `
+
+`npm install`
+
 ### Level
 _**Intermediate**_
 
