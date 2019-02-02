@@ -16,7 +16,7 @@ This project is loosely based on Angular's [Tour of Heroes tutorial](https://ang
 ### Level
 _**Intermediate**_
 
-#Step 1 - Initial Project
+# Step 1 - Initial Project
 1. In the command line navigate to a folder where you want to create the App <br>
 ``` $ cd code ```
 
