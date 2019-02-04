@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Glucose } from '../glucose';
-import { Category } from  '../category';
+import { Category } from '../category';
+import {CATEGORIES} from '../mock-categories';
 
 @Component({
   selector: 'app-glucose-item',
@@ -9,6 +10,8 @@ import { Category } from  '../category';
 })
 
 export class GlucoseItemComponent implements OnInit {
+
+  categories = CATEGORIES;
   
   @Input() glucose: Glucose;
   @Input() category: Category;

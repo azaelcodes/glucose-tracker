@@ -1,4 +1,4 @@
-import { Category } from './category.ts';
+import { Category } from './category';
 
 export const CATEGORIES: Category[] = [
     {
@@ -29,7 +29,7 @@ export const CATEGORIES: Category[] = [
         id: 5,
         name: 'After Dinner',
         added: '2019-01-02',
-        published: '1'
+        published: 1
     },
 
 ];
