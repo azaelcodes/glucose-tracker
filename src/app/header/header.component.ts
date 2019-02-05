@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {MatDialog, MatDialogRef} from '@angular/material';
 import { MatDialogConfig } from '@angular/material';
 import {AddItemDialogComponent} from '../add-item-dialog/add-item-dialog.component';
