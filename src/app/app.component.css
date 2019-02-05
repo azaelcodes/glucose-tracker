@@ -1,13 +1,1 @@
-mat-toolbar {
 
-  position: relative;
-
-}
-
-mat-toolbar div.plus-button {
-
-  position: absolute;
-  top: 3px;
-  right: 5px;
-
-}

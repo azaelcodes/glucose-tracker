@@ -6,13 +6,15 @@ import { GlucoseListComponent } from './glucose-list/glucose-list.component';
 import { MatToolbarModule, MatListModule, MatExpansionModule, MatFormFieldModule, MatInputModule, MatButtonModule, MatIconModule } from '@angular/material';
 import { GlucoseItemComponent } from './glucose-item/glucose-item.component';
 import { FormsModule} from '@angular/forms';
+import { HeaderComponent } from './header/header.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     GlucoseListComponent,
-    GlucoseItemComponent
+    GlucoseItemComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
