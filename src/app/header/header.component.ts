@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import { MatDialog } from '@angular/material';
 import { AddItemDialogComponent } from '../add-item-dialog/add-item-dialog.component';
+import { MatDialogConfig } from '@angular/material';
 
 @Component({
   selector: 'app-header',
@@ -12,15 +13,13 @@ export class HeaderComponent implements OnInit {
   constructor(public dialog: MatDialog) { }
 
   openDialog(): void {
-    const dialogRef = this.dialog.open(AddItemDialogComponent, {
-      height: '300px',
-      width: '250px'
-    });
 
-    dialogRef.afterClosed().subscribe(result => {
-      console.log('Dialog was closed');
-      console.log(result);
-    });
+    const dialogConfig = new MatDialogConfig();
+    dialogConfig.disableClose = true;
+    dialogConfig.autoFocus = true;
+
+    this.dialog.open(AddItemDialogComponent,  dialogConfig);
+
   }
 
   ngOnInit() {

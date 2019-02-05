@@ -3,7 +3,9 @@ import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { GlucoseListComponent } from './glucose-list/glucose-list.component';
-import { MatToolbarModule, MatExpansionModule, MatFormFieldModule, MatInputModule, MatButtonModule, MatIconModule } from '@angular/material';
+import { MatToolbarModule, MatExpansionModule, MatFormFieldModule } from '@angular/material';
+import { MatInputModule, MatButtonModule, MatIconModule } from '@angular/material';
+import { MatDialogModule } from '@angular/material';
 import { GlucoseItemComponent } from './glucose-item/glucose-item.component';
 import { FormsModule} from '@angular/forms';
 import { HeaderComponent } from './header/header.component';
@@ -27,6 +29,7 @@ import { AddItemDialogComponent } from './add-item-dialog/add-item-dialog.compon
     MatFormFieldModule,
     MatInputModule,
     MatButtonModule,
+    MatDialogModule,
     MatIconModule
   ],
   providers: [],
