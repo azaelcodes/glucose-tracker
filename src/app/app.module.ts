@@ -32,6 +32,7 @@ import { AddItemDialogComponent } from './add-item-dialog/add-item-dialog.compon
     MatDialogModule,
     MatIconModule
   ],
+  entryComponents: [AddItemDialogComponent],
   providers: [],
   bootstrap: [AppComponent]
 })

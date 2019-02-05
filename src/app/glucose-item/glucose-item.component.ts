@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Glucose } from '../glucose';
 import { Category } from '../category';
-import {CATEGORIES} from '../mock-categories';
+import { CATEGORIES } from '../mock-categories';
 
 @Component({
   selector: 'app-glucose-item',

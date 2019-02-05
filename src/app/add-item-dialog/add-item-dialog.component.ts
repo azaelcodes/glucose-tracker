@@ -6,15 +6,12 @@ import { MatDialogRef } from '@angular/material';
   templateUrl: './add-item-dialog.component.html',
   styleUrls: ['./add-item-dialog.component.css']
 })
-export class AddItemDialogComponent implements OnInit {
+export class AddItemDialogComponent {
 
   constructor(public dialogRef: MatDialogRef<AddItemDialogComponent>) { }
 
   onNoClick(): void {
     this.dialogRef.close();
-  }
-
-  ngOnInit() {
   }
 
 }

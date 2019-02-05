@@ -8,7 +8,6 @@ import { ITEMS } from '../mock-items';
 })
 export class GlucoseListComponent implements OnInit {
 
-  title = 'Glucose Levels';
   items = ITEMS;
 
   constructor() { }
