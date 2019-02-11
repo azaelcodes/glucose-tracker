@@ -1,15 +1,16 @@
 <h1 mat-dialog-title>Add Glucose Level</h1>
-<form class="form">
+<form class="form" #form="ngForm" (ngSubmit)="addItem()" >
   <mat-form-field>
-    <input matInput type="number" placeholder="Level">
+    <input matInput type="number" [(ngModel)]="item.level" #name="ngModel" placeholder="Level">
   </mat-form-field>
 
   <mat-form-field>
-    <select matNativeControl required>
+    <select matNativeControl [(ngModel)]="item.categoryId" #name="ngModel" required>
       <option *ngFor="let category of categories" value="category.name">{{ category.name }}</option>
     </select>
   </mat-form-field>
 
   <br>
-  <button color="primary" mat-raised-button>Save</button>
+  <button type="submit" color="primary" mat-raised-button>Save</button>
+
 </form>
