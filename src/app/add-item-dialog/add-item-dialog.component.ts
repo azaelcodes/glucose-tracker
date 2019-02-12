@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, ElementRef, OnInit} from '@angular/core';
 import { MatDialogRef } from '@angular/material';
 import { CATEGORIES } from '../mock-categories';
 import {Glucose} from '../glucose';
@@ -21,11 +21,11 @@ export class AddItemDialogComponent {
     this.dialogRef.close();
   }
 
-  addItem() {
+  addItem(form: NgForm) {
 
     const obj = new Glucose();
     obj.userId = 1;
-    obj.level = 7.1;
+    obj.level = 1;
     obj.categoryId = 1;
     obj.added = '2019-03-01';
     this.items.push(obj);
