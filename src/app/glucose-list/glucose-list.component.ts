@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ITEMS } from '../mock-items';
+import { GlucoseService } from '../glucose.service';
+import {Glucose} from "../glucose";
 
 @Component({
   selector: 'app-glucose-list',
@@ -8,11 +9,15 @@ import { ITEMS } from '../mock-items';
 })
 export class GlucoseListComponent implements OnInit {
 
-  items = ITEMS;
+    items: Glucose[];
+    constructor(private glucoseService: GlucoseService) { }
 
-  constructor() { }
+    ngOnInit() {
+        this.getItems();
+    }
 
-  ngOnInit() {
-  }
+    getItems(): void {
+        this.items = this.glucoseService.getItems();
+    }
 
 }
