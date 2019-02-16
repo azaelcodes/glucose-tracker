@@ -15,7 +15,7 @@
             ngModel
             name="category"
             required>
-      <option *ngFor="let category of categories" value="category.name">{{ category.name }}</option>
+      <option *ngFor="let category of categories" value="{{ category.name }}">{{ category.name }}</option>
     </select>
   </mat-form-field>
 
