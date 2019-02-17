@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { GlucoseService } from '../glucose.service';
-import {Glucose} from "../glucose";
+import {Glucose} from '../glucose';
 
 @Component({
   selector: 'app-glucose-list',
