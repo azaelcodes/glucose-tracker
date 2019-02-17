@@ -3,7 +3,6 @@ import { MatDialogRef } from '@angular/material';
 import { CATEGORIES } from '../mock-categories';
 import {Glucose} from '../glucose';
 import {NgForm} from '@angular/forms';
-import { AddItemService } from '../add-item.service';
 
 @Component({
   selector: 'app-add-item-dialog',
@@ -14,8 +13,7 @@ export class AddItemDialogComponent {
 
   categories = CATEGORIES;
 
-  constructor(public dialogRef: MatDialogRef<AddItemDialogComponent>,
-              public addItemService: AddItemService) { }
+  constructor(public dialogRef: MatDialogRef<AddItemDialogComponent>) { }
 
   addItem(form: NgForm) {
 
@@ -24,7 +22,6 @@ export class AddItemDialogComponent {
     obj.level = 1;
     obj.categoryId = 1;
     obj.added = '2019-03-01';
-    this.addItemService.add(obj);
 
   }
 
