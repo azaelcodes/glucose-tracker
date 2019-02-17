@@ -1,4 +1,4 @@
-import {Component, ElementRef, OnInit} from '@angular/core';
+import {Component} from '@angular/core';
 import { MatDialogRef } from '@angular/material';
 import { CATEGORIES } from '../mock-categories';
 import {Glucose} from '../glucose';
@@ -16,10 +16,6 @@ export class AddItemDialogComponent {
 
   constructor(public dialogRef: MatDialogRef<AddItemDialogComponent>,
               public addItemService: AddItemService) { }
-
-  onNoClick(): void {
-    this.dialogRef.close();
-  }
 
   addItem(form: NgForm) {
 

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Glucose } from 'glucose';
+import { Glucose } from './glucose';
 
 @Injectable({
   providedIn: 'root'
@@ -14,5 +14,4 @@ export class AddItemService {
       console.log('About to add item:', item);
       this.items.push(item);
   }
-
 }
