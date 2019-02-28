@@ -8,4 +8,8 @@ export class Glucose {
   published: number;
   added: string;
 
+  constructor(values: Object  = {}) {
+    Object.assign(this, values);
+  }
+
 }

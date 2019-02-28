@@ -18,7 +18,7 @@ export class GlucoseListComponent implements OnInit {
 
     getItems(): void {
         this.glucoseService.getItems()
-            .subscribe(items => this.items = items)
+            .subscribe(items => this.items = items);
     }
 
 }
