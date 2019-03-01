@@ -10,14 +10,24 @@ import {Glucose} from '../glucose';
 export class GlucoseListComponent implements OnInit {
 
     items: Glucose[];
-    constructor(private glucoseService: GlucoseService) { }
+    newItem: Glucose = new Glucose();
+
+    private glucoseService: GlucoseService;
+
+    constructor(glucoseService: GlucoseService) {
+        this.glucoseService = glucoseService;
+    }
 
     ngOnInit() {
         this.getItems();
     }
 
+    removeItem(item) {
+        this.glucoseService.deleteItemById(item.id);
+    }
+
     getItems(): void {
-        this.glucoseService.getItems()
+        this.glucoseService.getAllItems()
             .subscribe(items => this.items = items);
     }
 

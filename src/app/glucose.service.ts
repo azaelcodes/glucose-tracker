@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { Glucose } from './glucose';
-import { ITEMS } from './mock-items';
 import { Observable, of } from 'rxjs';
 
 @Injectable({
@@ -10,8 +9,8 @@ export class GlucoseService {
 
     // Simulation of id incrementing
     lastId: number = 0;
-
     items: Glucose[] = [];
+
     constructor() { }
 
     addItem(glucose: Glucose) {
@@ -24,13 +23,32 @@ export class GlucoseService {
         return this;
     }
 
-    deleteTodoById(id: number): GlucoseService {
+    deleteItemById(id: number): GlucoseService {
+
+        this.items = this.items.filter(item => item.id !== id);
+        return this;
 
     }
 
-    // deleteItemById(id: )
+    updateItemById(id: number, values: Object = {}): Glucose {
 
-    getItems(): Observable<Glucose[]> {
-        return of(ITEMS);
+        let item = this.getItemById(id);
+        if (!item) {
+            return null;
+        }
+
+        Object.assign(item, values);
+        return item;
+
+    }
+
+    getAllItems(): Observable<Glucose[]> {
+        return of(this.items);
+    }
+
+    getItemById(id: number): Glucose {
+        return this.items
+            .filter(item => item.id !== id)
+            .pop();
     }
 }
