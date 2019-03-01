@@ -19,8 +19,8 @@ export class AddItemDialogComponent {
 
   addItem() {
 
+    this.newItem.added = '2019-01-01';
     this.glucoseService.addItem(this.newItem);
-    this.newItem = new Glucose();
 
   }
 
