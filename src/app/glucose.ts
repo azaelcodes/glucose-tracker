@@ -3,7 +3,7 @@ export class Glucose {
   id: number;
   userId: number;
   level: number;
-  categoryId: number;
+  categoryName: string;
   tags: string;
   published: number;
   added: string;

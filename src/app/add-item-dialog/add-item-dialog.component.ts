@@ -2,7 +2,6 @@ import {Component} from '@angular/core';
 import { MatDialogRef } from '@angular/material';
 import { CATEGORIES } from '../mock-categories';
 import {Glucose} from '../glucose';
-import {NgForm} from '@angular/forms';
 import {GlucoseService} from '../glucose.service';
 
 @Component({
@@ -15,13 +14,14 @@ export class AddItemDialogComponent {
   categories = CATEGORIES;
   newItem: Glucose = new Glucose();
 
-
-  constructor(public dialogRef: MatDialogRef<AddItemDialogComponent>, private glucoseService: GlucoseService) { }
+  constructor(public dialogRef: MatDialogRef<AddItemDialogComponent>,
+              private glucoseService: GlucoseService) { }
 
   addItem() {
 
     this.glucoseService.addItem(this.newItem);
     this.newItem = new Glucose();
+
   }
 
 }
